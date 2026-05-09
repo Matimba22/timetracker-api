@@ -1,6 +1,6 @@
 # TimeTracker and Billing System API
 
-A Spring Boot-based legal time tracking system developed for the Motsoeneng Bill Software Engineer Internship assessment.
+A Spring Boot-based legal time tracking system designed to automate billable time capture, matter tracking, and invoice generation for legal practices..
 
 ## Features
 
