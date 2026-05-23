@@ -1,29 +1,73 @@
-# TimeTracker and Billing System API
+# 💼 MB Legal Time Tracker & Billing System
 
-A Spring Boot-based legal time tracking system designed to automate billable time capture, matter tracking, and invoice generation for legal practices..
+A full-stack legal time tracking and billing platform built using Spring Boot, designed to help legal practices manage clients, matters, billable hours, invoice generation, and billing analytics through a modern SaaS-style dashboard.
 
-## Features
+The system automates legal billing workflows by improving time tracking accuracy, invoice management, and financial visibility.
 
+---
+
+# 🚀 Features
+
+## ⚖️ Legal Matter Management
 - Client management
 - Matter management
-- Manual time tracking
+- Matter-based billing workflows
+
+## ⏱️ Time Tracking
+- Manual time entry tracking
 - Simulated automated time capture
-- Billing and invoice generation
-- RESTful API endpoints
-- H2 in-memory database integration
-- Postman API testing
+- Billable hours calculation
+- Time entry management
 
-## Technologies Used
+## 🧾 Invoice & Billing System
+- Automatic invoice generation
+- Professional PDF invoice export
+- Invoice status workflow:
+  - DRAFT
+  - SENT
+  - PAID
+  - OVERDUE
+- Revenue tracking and analytics
 
+## 📊 SaaS Dashboard
+- KPI statistic cards
+- Revenue analytics chart
+- Invoice statistics overview
+- Responsive enterprise dashboard UI
+- Sidebar navigation system
+
+## 🔌 REST API Integration
+- Spring Boot RESTful APIs
+- Frontend-backend integration using JavaScript Fetch API
+- Real-time dashboard statistics
+
+---
+
+# 🏗️ Technologies Used
+
+## Backend
 - Java 17
 - Spring Boot
 - Spring Data JPA
+- Hibernate
 - Maven
 - H2 Database
-- Postman
-- Git & GitHub
+- iText PDF
 
-## Project Structure
+## Frontend
+- HTML5
+- CSS3
+- JavaScript
+- Chart.js
+
+## Tools
+- Git & GitHub
+- Postman
+- Eclipse IDE
+
+---
+
+# 📁 Project Structure
 
 ```text
 src/main/java/com/mb/timetracker
@@ -32,29 +76,12 @@ src/main/java/com/mb/timetracker
 ├── service
 ├── repository
 ├── model
-```
+├── dto
 
-## Example API Endpoints
-
-### Create Client
-POST `/clients`
-
-### Create Matter
-POST `/matters`
-
-### Start Time Entry
-POST `/time/start`
-
-### Stop Time Entry
-POST `/time/stop/{id}`
-
-### Generate Invoice
-GET `/billing/invoice/{clientId}`
-
-## Objective
-
-The system aims to reduce manual billing inefficiencies within legal practices by automating time tracking and improving billing accuracy.
-
-## Author
-
-Owen Matimba Manyiki
+frontend/
+│
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│    └── screenshots/
