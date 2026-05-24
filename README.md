@@ -1,4 +1,4 @@
-# 💼 MB Legal Time Tracker & Billing System
+# MB Legal Time Tracker & Billing System
 
 A full-stack legal time tracking and billing platform built using Spring Boot, designed to help legal practices manage clients, matters, billable hours, invoice generation, and billing analytics through a modern SaaS-style dashboard.
 
@@ -6,20 +6,20 @@ The system automates legal billing workflows by improving time tracking accuracy
 
 ---
 
-# 🚀 Features
+# Features
 
-## ⚖️ Legal Matter Management
+## Legal Matter Management
 - Client management
 - Matter management
 - Matter-based billing workflows
 
-## ⏱️ Time Tracking
+## Time Tracking
 - Manual time entry tracking
 - Simulated automated time capture
 - Billable hours calculation
 - Time entry management
 
-## 🧾 Invoice & Billing System
+## Invoice & Billing System
 - Automatic invoice generation
 - Professional PDF invoice export
 - Invoice status workflow:
@@ -29,21 +29,21 @@ The system automates legal billing workflows by improving time tracking accuracy
   - OVERDUE
 - Revenue tracking and analytics
 
-## 📊 SaaS Dashboard
+## SaaS Dashboard
 - KPI statistic cards
 - Revenue analytics chart
 - Invoice statistics overview
 - Responsive enterprise dashboard UI
 - Sidebar navigation system
 
-## 🔌 REST API Integration
+## REST API Integration
 - Spring Boot RESTful APIs
 - Frontend-backend integration using JavaScript Fetch API
 - Real-time dashboard statistics
 
 ---
 
-# 🏗️ Technologies Used
+# Technologies Used
 
 ## Backend
 - Java 17
@@ -67,7 +67,7 @@ The system automates legal billing workflows by improving time tracking accuracy
 
 ---
 
-# 📁 Project Structure
+# Project Structure
 
 ```text
 src/main/java/com/mb/timetracker
