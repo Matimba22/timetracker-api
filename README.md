@@ -85,3 +85,15 @@ frontend/
 ├── script.js
 ├── assets/
 │    └── screenshots/
+
+# Dashboard Preview
+
+[Dashboard](assets/screenshots/dashboard.png) 
+
+# Invoice Management
+
+[Invoices](assets/screenshots/invoices.png)
+
+# PDF Invoice
+
+[PDF Invoice](assets/screenshots/pdf-invoice.png)
