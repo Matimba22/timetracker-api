@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MB Legal Time Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <h1>MB Legal Time Tracker & Billing System</h1>
+
+    <!-- ACTION BUTTONS -->
+    <div class="card">
+
+        <h2>Time Tracking Actions</h2>
+
+        <div class="buttons">
+
+            <button onclick="window.startTimer()">
+                Start Timer
+            </button>
+
+            <button onclick="window.stopTimer()">
+                Stop Timer
+            </button>
+
+            <button onclick="window.autoCapture()">
+                Auto Capture
+            </button>
+
+            <button onclick="window.getEntries()">
+                View Entries
+            </button>
+
+            <button onclick="window.getBilling()">
+    			Billing Summary
+			</button>
+			
+			<button onclick="downloadInvoicePDF()">
+    			Download Invoice PDF
+			</button>
+
+        </div>
+
+    </div>
+
+    <!-- LIVE STATUS -->
+    <div class="card">
+
+        <h2>System Status</h2>
+
+        <div id="output">
+            System Ready...
+        </div>
+
+    </div>
+    
+    <!-- BILLING SUMMARY -->
+
+<div class="card">
+
+    <h2>Billing Summary</h2>
+
+    <div class="billing-grid">
+
+        <div class="billing-box">
+            <h3>Total Minutes</h3>
+            <p id="totalMinutes">0</p>
+        </div>
+
+        <div class="billing-box">
+            <h3>Total Hours</h3>
+            <p id="totalHours">0</p>
+        </div>
+
+        <div class="billing-box">
+            <h3>Amount Due</h3>
+            <p id="amountDue">R0</p>
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- TIME ENTRIES TABLE -->
+    <div class="card">
+
+        <h2>Time Entries</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Client</th>
+                    <th>Description</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+
+            <tbody id="entriesTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

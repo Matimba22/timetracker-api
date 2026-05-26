@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+    button:hover {
+        background-color: #1d4ed8;
+    }
+
+#output {
+    background: #0f172a;
+    color: #38bdf8;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 60px;
+    white-space: pre-wrap;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    table th {
+        background-color: #2563eb;
+        color: white;
+        padding: 12px;
+    }
+
+    table td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    table tr:hover {
+        background-color: #f1f5f9;
+    }
+.billing-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.billing-box {
+    flex: 1;
+    min-width: 200px;
+    background-color: #eff6ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+    .billing-box h3 {
+        margin-bottom: 10px;
+        color: #1e3a8a;
+    }
+
+    .billing-box p {
+        font-size: 28px;
+        font-weight: bold;
+        color: #2563eb;
+    }

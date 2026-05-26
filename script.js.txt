@@ -1,0 +1,130 @@
+console.log("SCRIPT RUNNING - TOP REACHED");
+
+let currentEntryId = null;
+
+window.startTimer = async function () {
+
+    const response = await fetch(
+        "http://localhost:8080/time/start?matterId=1",
+        {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                description: "Frontend Manual Timer"
+            })
+        }
+    );
+
+    const data = await response.json();
+
+    currentEntryId = data.id;
+
+    document.getElementById("output").innerHTML =
+        JSON.stringify(data, null, 2);
+};
+
+window.stopTimer = async function () {
+
+    if (!currentEntryId) {
+        document.getElementById("output").innerHTML =
+            "No active timer";
+        return;
+    }
+
+    const response = await fetch(
+        `http://localhost:8080/time/stop/${currentEntryId}`,
+        { method: "POST" }
+    );
+
+    const data = await response.json();
+
+    document.getElementById("output").innerHTML =
+        JSON.stringify(data, null, 2);
+};
+
+window.autoCapture = async function () {
+
+    const response = await fetch(
+        "http://localhost:8080/time/auto?clientId=1&matterId=1&activity=Email&minutes=30",
+        { method: "POST" }
+    );
+
+    const data = await response.json();
+
+    document.getElementById("output").innerHTML =
+        JSON.stringify(data, null, 2);
+};
+
+window.getEntries = async function () {
+
+    const response = await fetch("http://localhost:8080/time");
+
+    const data = await response.json();
+
+    const table = document.getElementById("entriesTable");
+    table.innerHTML = "";
+
+    data.forEach(entry => {
+        table.innerHTML += `
+            <tr>
+                <td>${entry.id}</td>
+                <td>${entry.client?.name ?? ""}</td>
+                <td>${entry.description}</td>
+                <td>${entry.duration ?? "Running"}</td>
+            </tr>
+        `;
+    });
+
+    document.getElementById("output").innerHTML =
+        "Entries loaded successfully";
+};
+
+window.getBilling = async function () {
+
+    const response = await fetch(
+        "http://localhost:8080/billing/matter/1"
+    );
+
+    const data = await response.json();
+
+    document.getElementById("totalMinutes").innerText = data.totalMinutes;
+    document.getElementById("totalHours").innerText = data.totalHours.toFixed(2);
+    document.getElementById("amountDue").innerText = "R" + data.amount.toFixed(2);
+
+    document.getElementById("output").innerHTML =
+        "Billing loaded";
+};
+
+window.downloadInvoicePDF = function () {
+    console.log("PDF button clicked");
+
+    fetch("http://localhost:8080/invoice/matter/1/pdf")
+        .then(res => {
+            if (!res.ok) throw new Error("HTTP error " + res.status);
+            return res.blob();
+        })
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "invoice.pdf";
+
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+
+            window.URL.revokeObjectURL(url);
+        })
+        .catch(err => {
+            console.error("PDF download failed:", err);
+        });
+};
+console.log("SCRIPT RUNNING - BOTTOM REACHED");
+
+await axios.put(
+    `http://localhost:8080/api/invoices/${id}/status`,
+    {
+        status: "PAID"
+    }
+);
