@@ -97,3 +97,5 @@ frontend/
 # PDF Invoice
 
 [PDF Invoice](assets/screenshots/pdf-invoice.png)
+
+## Author: Matimba Manyiki
